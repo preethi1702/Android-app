@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        println("on create")
     }
     fun sendMessage(view: View) {
         // Do something in response to button
@@ -22,5 +23,22 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
+    override fun onStart(){
+        super.onStart()
+        println("on start")
     }
+    override fun onResume(){
+        super.onResume()
+        println("on Resume")
+    }
+    override fun onPause(){
+        super.onPause()
+        println("on Pause")
+    }
+    override fun onStop() {
+        super.onStop()
+        println("on Stop")
+    }
+    }
+
 
